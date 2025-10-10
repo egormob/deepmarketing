@@ -1,38 +1,31 @@
+const parallaxLayers = document.querySelectorAll('[data-depth]');
 const toTopButton = document.querySelector('.to-top');
 
-const toggleToTopVisibility = () => {
-  if (!toTopButton) return;
-  const show = window.scrollY > 400;
-  toTopButton.style.display = show ? 'flex' : 'none';
+const applyParallax = () => {
+  const scrollTop = window.scrollY || window.pageYOffset;
+  parallaxLayers.forEach((layer) => {
+    const depth = parseFloat(layer.dataset.depth) || 0;
+    const movement = scrollTop * depth;
+    layer.style.transform = `translate3d(0, ${movement * -0.4}px, 0)`;
+  });
 };
 
-toggleToTopVisibility();
-window.addEventListener('scroll', toggleToTopVisibility);
+const toggleToTop = () => {
+  if (window.scrollY > window.innerHeight * 0.5) {
+    toTopButton?.classList.add('is-visible');
+  } else {
+    toTopButton?.classList.remove('is-visible');
+  }
+};
+
+window.addEventListener('scroll', () => {
+  applyParallax();
+  toggleToTop();
+});
+
+window.addEventListener('resize', applyParallax);
+applyParallax();
 
 toTopButton?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-const form = document.querySelector('.form');
-
-form?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const formData = new FormData(form);
-  const name = formData.get('name');
-
-  form.reset();
-
-  const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.textContent = `Спасибо, ${name || 'друг'}! Мы свяжемся с вами скоро.`;
-  document.body.appendChild(toast);
-
-  requestAnimationFrame(() => {
-    toast.classList.add('toast--visible');
-  });
-
-  setTimeout(() => {
-    toast.classList.remove('toast--visible');
-    setTimeout(() => toast.remove(), 400);
-  }, 3200);
 });
