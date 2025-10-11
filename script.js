@@ -1,31 +1,40 @@
-const parallaxLayers = document.querySelectorAll('[data-depth]');
-const toTopButton = document.querySelector('.to-top');
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav = document.querySelector('.site-nav');
+const focusableLinks = siteNav?.querySelectorAll('a') ?? [];
 
-const applyParallax = () => {
-  const scrollTop = window.scrollY || window.pageYOffset;
-  parallaxLayers.forEach((layer) => {
-    const depth = parseFloat(layer.dataset.depth) || 0;
-    const movement = scrollTop * depth;
-    layer.style.transform = `translate3d(0, ${movement * -0.4}px, 0)`;
-  });
+const toggleNav = (open) => {
+  if (!navToggle || !siteNav) return;
+  const isOpen = open ?? navToggle.getAttribute('aria-expanded') === 'true';
+  const nextState = open ?? !isOpen;
+  navToggle.setAttribute('aria-expanded', String(nextState));
+  siteNav.classList.toggle('is-open', nextState);
+  document.body.classList.toggle('nav-open', nextState);
 };
 
-const toggleToTop = () => {
-  if (window.scrollY > window.innerHeight * 0.5) {
-    toTopButton?.classList.add('is-visible');
-  } else {
-    toTopButton?.classList.remove('is-visible');
+navToggle?.addEventListener('click', () => {
+  toggleNav();
+});
+
+focusableLinks.forEach((link) => {
+  link.addEventListener('click', () => toggleNav(false));
+});
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    toggleNav(false);
+  }
+});
+
+const mediaQuery = window.matchMedia('(max-width: 960px)');
+const handleViewportChange = () => {
+  if (!mediaQuery.matches) {
+    toggleNav(false);
   }
 };
 
-window.addEventListener('scroll', () => {
-  applyParallax();
-  toggleToTop();
-});
-
-window.addEventListener('resize', applyParallax);
-applyParallax();
-
-toTopButton?.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+handleViewportChange();
+if (typeof mediaQuery.addEventListener === 'function') {
+  mediaQuery.addEventListener('change', handleViewportChange);
+} else if (typeof mediaQuery.addListener === 'function') {
+  mediaQuery.addListener(handleViewportChange);
+}
