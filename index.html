@@ -3,213 +3,215 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Glam School — Маркетинг будущего</title>
+  <title>София Демидова — AI-маркетинг стратег</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <div class="parallax" aria-hidden="true">
-    <div class="parallax__layer parallax__layer--gradient" data-depth="0.05"></div>
-    <div class="parallax__layer parallax__layer--grid" data-depth="0.12"></div>
-    <div class="parallax__layer parallax__layer--orbs" data-depth="0.28"></div>
-    <div class="parallax__layer parallax__layer--scan" data-depth="0.4"></div>
+<body id="top">
+  <div class="background" aria-hidden="true">
+    <div class="background__gradient"></div>
+    <div class="background__orb background__orb--one"></div>
+    <div class="background__orb background__orb--two"></div>
+    <div class="background__grid"></div>
   </div>
 
-  <header class="hero" id="top">
-    <div class="container hero__layout">
-      <div class="hero__content">
-        <span class="hero__badge">AI Glam School</span>
-        <h1>Маркетинг будущего в одном кадре</h1>
-        <p class="hero__lead">Минимум шума, максимум нейро-инструментов и остроумия. Мы собираем кампании, где AI
-          сияет и продаёт.</p>
-        <div class="hero__meta">
-          <div class="hero__chip">
-            <span>3 дня</span>
-            Практики и воркшопы
-          </div>
-          <div class="hero__chip">
-            <span>15</span>
-            AI-паттернов
-          </div>
-        </div>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#registration">Записаться</a>
-          <a class="btn btn--ghost" href="#modules">Программа</a>
-        </div>
-      </div>
-      <div class="hero__device">
-        <div class="device">
-          <div class="device__halo"></div>
-          <div class="device__body">
-            <div class="device__notch"></div>
-            <div class="device__screen">
-              <img src="public/img/hero-portrait.jpg" alt="Фотография участницы на первом экране" loading="lazy">
-            </div>
-          </div>
-          <div class="device__shadow"></div>
-        </div>
-      </div>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top">Sofia Demidova</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Меню</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Главное меню">
+        <a href="#focus">Фокус</a>
+        <a href="#systems">Системы</a>
+        <a href="#signals">Сигналы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <a class="header-cta" href="https://t.me/deepmarketing" target="_blank" rel="noreferrer">Связаться</a>
     </div>
   </header>
 
   <main>
-    <section class="section section--split" id="promise">
-      <div class="container">
-        <div class="section__content">
-          <h2>Маркетинг с AI — это не скучные отчёты, а шоу с фейерверками данных</h2>
-          <p>Мы докажем, что AI-инструменты могут быть смешными, glam и при этом приносить деньги. Вы научитесь
-            запускать кампании, где чат-боты разговаривают как стендап-комики, а генеративные модели рисуют баннеры
-            быстрее, чем вы успеваете моргнуть.</p>
-          <div class="pill-grid">
-            <span class="pill">Нейросцена продаж</span>
-            <span class="pill">Гиперперсонализация</span>
-            <span class="pill">Мем-инжиниринг</span>
-            <span class="pill">AI-воронки</span>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__eyebrow">AI marketing lab</span>
+          <h1>Создаю маркетинг, где алгоритмы и идеи работают на рост</h1>
+          <p>Помогаю брендам превращать данные в эмоции: собираю стратегию, строю продуктовые воронки и подключаю
+            искусственный интеллект там, где он усиливает креатив, а не мешает команде.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="mailto:hello@deepmarketing.studio">hello@deepmarketing.studio</a>
+            <a class="btn btn--ghost" href="https://t.me/deepmarketing" target="_blank" rel="noreferrer">Телеграм</a>
           </div>
-        </div>
-        <div class="section__card">
-          <h3>Вы уйдёте с:</h3>
-          <ul>
-            <li>Сценарием кампании «AI комик» для прогрева</li>
-            <li>Готовой автоворонкой, где ИИ шутит и продаёт</li>
-            <li>Стеком инструментов под ваш бюджет</li>
-            <li>Стратегией прогрева через мемы и VR-показы</li>
+          <ul class="hero__metrics" role="list">
+            <li>
+              <span>+280%</span>
+              uplift на запуске AI-кампании в e-commerce
+            </li>
+            <li>
+              <span>37</span>
+              спринтов по внедрению нейро-инструментов
+            </li>
+            <li>
+              <span>12</span>
+              продуктов с персонализированными сценариями
+            </li>
           </ul>
         </div>
+        <figure class="hero__portrait">
+          <div class="portrait-card">
+            <div class="portrait-card__glow"></div>
+            <img src="public/img/hero-portrait.jpg" alt="Портрет Софии Демидовой" loading="lazy">
+            <figcaption>
+              <span>София Демидова</span>
+              AI-маркетинг стратег &amp; продюсер роста
+            </figcaption>
+          </div>
+        </figure>
       </div>
     </section>
 
-    <section class="section section--panels" id="modules">
-      <div class="container">
-        <h2>Программа тренинга «Marketing AI Show»</h2>
-        <div class="panels">
-          <article class="panel">
-            <span class="panel__step">День 1</span>
-            <h3>Гламурный бриф: строим AI-персону</h3>
-            <p>Создаём брендового цифрового двойника, который умеет шутить, продавать и танцевать танец продаж в TikTok.</p>
+    <section id="focus" class="section">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2>Фокус на том, что действительно усиливает продукт</h2>
+          <p>Собираю стек из аналитики, генеративного контента и автоматизации, чтобы команда успевала тестировать
+            гипотезы, а бренд звучал последовательно во всех каналах.</p>
+        </header>
+        <div class="pillars">
+          <article class="glass-card">
+            <h3>Стратегия принятия решений</h3>
+            <p>Связываю данные CRM, поведение пользователей и исследовательские инсайты в единую карту роста. Делаю
+              понятную логику, куда направлять бюджет и как измерять эффект.</p>
           </article>
-          <article class="panel">
-            <span class="panel__step">День 2</span>
-            <h3>Контент с глубиной 4D</h3>
-            <p>Генерим визуал с параллаксом, видео с глубиной и слоганы, которые звучат как саундтрек к кибер-мюзиклу.</p>
+          <article class="glass-card">
+            <h3>AI-креатив &amp; контент-лаборатория</h3>
+            <p>Создаю визуальные и текстовые концепции на базе диффузионных и LLM-моделей. Настраиваю пайплайн, где
+              генерация, отбор и адаптация проходят за часы.</p>
           </article>
-          <article class="panel">
-            <span class="panel__step">День 3</span>
-            <h3>Воронки, которые продают, пока вы сияете</h3>
-            <p>Собираем автоматизацию, обучаем AI-ассистента закрывать лидов и устраиваем финальный бал лидогенерации.</p>
+          <article class="glass-card">
+            <h3>Маркетинговые системы</h3>
+            <p>Проектирую автоворонки, чат-ассистентов и персональные рекомендации. Выстраиваю метрики, A/B тесты и
+              синхронизирую их с бизнес-целями.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--highlight" id="bonus">
-      <div class="container highlight">
-        <div>
-          <h2>Бонус — «Неоновые скрипты продаж»</h2>
-          <p>Получите набор из 25 готовых AI-подсказок, которые превращают диалоги в шутливые, но убедительные продажи.
-            От интро до закрытия сделки — всё в одном досье.</p>
-        </div>
-        <div class="highlight__metrics">
-          <div>
-            <span>+213%</span>
-            <p>к конверсии лидов после внедрения AI-мемов</p>
-          </div>
-          <div>
-            <span>4 ч</span>
-            <p>экономии в день за счёт автоматизации</p>
-          </div>
-          <div>
-            <span>97%</span>
-            <p>участников обновили tone of voice бренда</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--testimonials" id="reviews">
-      <div class="container">
-        <h2>Отзывы выпускников</h2>
-        <div class="testimonials">
-          <figure class="testimonial">
-            <blockquote>
-              «Наш AI-консьерж продаёт курсы, рассказывая анекдоты про большие данные. Клиенты ржут — и покупают».
-            </blockquote>
-            <figcaption>— Лера, основательница студии контента</figcaption>
-          </figure>
-          <figure class="testimonial">
-            <blockquote>
-              «Запустили кампанию в метавселенной. Люди шли за шутками, уходили с подпиской. ROI — космос!»
-            </blockquote>
-            <figcaption>— Тимур, маркетолог edtech-платформы</figcaption>
-          </figure>
-          <figure class="testimonial">
-            <blockquote>
-              «AI-модуль придумал нам мини-стендап. Мы за неделю продали годовой доступ, пока команда тусила».
-            </blockquote>
-            <figcaption>— Аня, CEO SaaS-сервиса</figcaption>
-          </figure>
+    <section id="systems" class="section section--alt">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2>Системы, которые можно масштабировать</h2>
+          <p>Каждый модуль — отдельный стек инструментов. Собираю под вашу команду и обучаю на практике.</p>
+        </header>
+        <div class="systems">
+          <article class="system">
+            <div class="system__tag">01</div>
+            <h3>Neuro Canvas</h3>
+            <p>Фреймворк для проектирования продукта и позиционирования с помощью AI-аналитики. Помогает видеть карту
+              возможностей и быстро запускать пилоты.</p>
+            <ul>
+              <li>Работа с обратной связью из сообщества и CRM</li>
+              <li>Нейро-аналитика аудитории</li>
+              <li>Переупаковка ценностного предложения</li>
+            </ul>
+          </article>
+          <article class="system">
+            <div class="system__tag">02</div>
+            <h3>Signal Engine</h3>
+            <p>Система сигналов, которая объединяет мониторинг, исследования и генерацию контента. Видно, когда и где
+              включать кампании.</p>
+            <ul>
+              <li>AI-асистенты для сбора инсайтов</li>
+              <li>Динамические контент-паттерны</li>
+              <li>Мультканальные сценарии nurturing</li>
+            </ul>
+          </article>
+          <article class="system">
+            <div class="system__tag">03</div>
+            <h3>Growth Studio</h3>
+            <p>Командная среда для экспериментов. Настраиваем процессы, чтобы маркетинг, продукт и продажи работали на
+              одной доске и с единым стеком данных.</p>
+            <ul>
+              <li>Дашборды принятия решений</li>
+              <li>Автоматизированные спринты</li>
+              <li>Обучение команды и документация</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--faq" id="faq">
-      <div class="container">
-        <h2>Вопросы, которые нам задают</h2>
-        <div class="faq">
-          <details open>
-            <summary>Нужно ли быть гением, чтобы дружить с AI?</summary>
-            <p>Достаточно любить маркетинг и уметь смеяться. Остальное — наши методички, сценарии и поддержка в чате.</p>
-          </details>
-          <details>
-            <summary>Как проходит обучение?</summary>
-            <p>3 живых дня, записи, шаблоны и совместные сессии. Плюс встреча «AI-карнавал» через неделю.</p>
-          </details>
-          <details>
-            <summary>Есть ли рассрочка?</summary>
-            <p>Да, предлагаем гибкую оплату и корпоративные пакеты. Напишите нам — подберём идеальный вариант.</p>
-          </details>
+    <section id="signals" class="section">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2>Сигналы и результаты</h2>
+          <p>Комбинирую экспериментальные метрики и понятные бизнес-результаты. Так легче защищать смелые решения.</p>
+        </header>
+        <div class="signals">
+          <article class="signal">
+            <h3>AI-консьерж для EdTech</h3>
+            <p>Автоматизировала 70% общения с лидами, сократила цикл сделки на 3 дня и удержала NPS на уровне 9/10.</p>
+          </article>
+          <article class="signal">
+            <h3>Генеративный контент-хаб</h3>
+            <p>Построила пайплайн с Midjourney и собственными LoRA. Поддерживаем 24 вариации креатива без выгорания
+              команды.</p>
+          </article>
+          <article class="signal">
+            <h3>Data-driven бренд в финтехе</h3>
+            <p>Объединила продуктовые данные и маркетинг. Научились предсказывать конверсию и перераспределять бюджет в
+              течение суток.</p>
+          </article>
+          <article class="signal">
+            <h3>AI для офлайн-ивентов</h3>
+            <p>Настроила мультимодальную систему рекомендаций. Рост повторных продаж на 46% за сезон.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--cta" id="registration">
-      <div class="container cta">
-        <div class="cta__content">
-          <h2>Готовы включить AI на максимум?</h2>
-          <p>Заполните форму, и мы пришлём расписание ближайшей группы, бонусы и приватную ссылку на afterparty.</p>
-          <div class="cta__links">
-            <a class="btn btn--primary" href="https://t.me/deepmarketing" target="_blank" rel="noreferrer">Перейти в секретный чат</a>
-            <a class="btn btn--ghost" href="#top">Вернуться наверх</a>
+    <section id="contact" class="section section--alt contact">
+      <div class="container contact__inner">
+        <div class="contact__intro">
+          <h2>Давайте соберём вашу следующую систему роста</h2>
+          <p>Опишите задачу или пришлите ссылку на продукт. Вернусь с идеями и дорожной картой тестов.</p>
+          <div class="contact__links">
+            <a class="btn btn--primary" href="https://t.me/deepmarketing" target="_blank" rel="noreferrer">Написать в
+              Telegram</a>
+            <a class="btn btn--ghost" href="mailto:hello@deepmarketing.studio">Отправить письмо</a>
           </div>
         </div>
-        <form class="form" name="registration" netlify>
-          <label for="name">Имя</label>
-          <input id="name" name="name" type="text" placeholder="Мария" required>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="shine@brand.ai" required>
-          <label for="goal">Цель</label>
-          <textarea id="goal" name="goal" rows="3" placeholder="Хочу запуск на 1 000 лидов и мемы в подарок"></textarea>
-          <button type="submit" class="btn btn--primary">Зарегистрироваться</button>
-          <p class="form__note">Заполняя форму, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</p>
+        <form class="contact__form" name="contact" netlify>
+          <label for="company">Компания или продукт</label>
+          <input id="company" name="company" type="text" placeholder="Deep Marketing" required>
+          <label for="challenge">Главная задача</label>
+          <textarea id="challenge" name="challenge" rows="3"
+            placeholder="Хочу выстроить системный маркетинг с AI-ассистентами"></textarea>
+          <label for="timeline">Желаемый таймлайн</label>
+          <input id="timeline" name="timeline" type="text" placeholder="Старт в июле">
+          <button class="btn btn--primary" type="submit">Запросить созвон</button>
+          <p class="contact__note">Оставляя заявку, вы соглашаетесь с обработкой данных и получаете PDF с моим чек-листом
+            по AI-маркетингу.</p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© 2024 AI Glam School. Маркетинг с юмором и искусственным интеллектом.</p>
-      <nav class="footer__nav" aria-label="Меню футера">
-        <a href="#modules">Программа</a>
-        <a href="#reviews">Отзывы</a>
-        <a href="mailto:hello@aiglam.school">hello@aiglam.school</a>
-      </nav>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© 2024 София Демидова. Deep marketing systems &amp; AI strategy.</p>
+      <div class="site-footer__links">
+        <a href="https://t.me/deepmarketing" target="_blank" rel="noreferrer">Telegram</a>
+        <a href="mailto:hello@deepmarketing.studio">Email</a>
+        <a href="#top">Наверх</a>
+      </div>
     </div>
   </footer>
-
-  <button class="to-top" type="button" aria-label="Вернуться наверх">↑</button>
 
   <script src="script.js"></script>
 </body>
