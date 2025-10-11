@@ -192,14 +192,17 @@ main {
 
 .hero__inner {
   display: grid;
-  gap: clamp(2.5rem, 5vw, 4.5rem);
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(2.5rem, 6vw, 4.75rem);
+  grid-template-columns: minmax(280px, 1fr);
   align-items: center;
+  justify-items: center;
 }
 
 .hero__content {
   display: grid;
   gap: 1.6rem;
+  max-width: 560px;
+  text-align: center;
 }
 
 .hero__eyebrow {
@@ -244,6 +247,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
+  justify-content: center;
 }
 
 .btn {
@@ -289,13 +293,14 @@ h1 {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  justify-items: center;
 }
 
 .hero__metrics li {
   padding: 1.1rem 1.2rem;
   border-radius: var(--radius-md);
-  background: var(--glass);
-  border: 1px solid rgba(136, 175, 255, 0.12);
+  background: rgba(12, 28, 56, 0.48);
+  border: 1px solid rgba(136, 175, 255, 0.16);
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.5;
@@ -311,52 +316,65 @@ h1 {
 }
 
 .hero__portrait {
-  display: flex;
-  justify-content: center;
-}
-
-.portrait-card {
   position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.12), rgba(30, 40, 70, 0.4));
-  border: 1px solid rgba(136, 175, 255, 0.22);
-  box-shadow: 0 40px 80px rgba(4, 6, 15, 0.55);
-  max-width: min(420px, 90vw);
+  display: grid;
+  gap: 1.2rem;
+  justify-items: center;
+  isolation: isolate;
 }
 
-.portrait-card__glow {
+.hero__portrait::after {
+  content: "";
   position: absolute;
-  inset: -40% -20% auto;
-  height: 70%;
-  background: radial-gradient(circle at 35% 20%, rgba(91, 200, 255, 0.35), transparent 70%),
-    radial-gradient(circle at 70% 30%, rgba(138, 125, 255, 0.4), transparent 75%);
+  inset: -18% -22% auto;
+  height: 88%;
+  background: radial-gradient(circle at 30% 20%, rgba(91, 200, 255, 0.25), transparent 70%),
+    radial-gradient(circle at 70% 30%, rgba(138, 125, 255, 0.32), transparent 72%);
+  filter: blur(55px);
+  opacity: 0.9;
+  z-index: -2;
+}
+
+.hero__portrait-glow {
+  position: absolute;
+  inset: -12% -10% auto;
+  height: 75%;
+  background: radial-gradient(circle at 45% 20%, rgba(91, 200, 255, 0.35), transparent 68%),
+    radial-gradient(circle at 70% 35%, rgba(138, 125, 255, 0.4), transparent 75%);
   filter: blur(40px);
-  opacity: 0.85;
+  opacity: 0.8;
+  z-index: -1;
   pointer-events: none;
 }
 
-.portrait-card img {
-  width: 100%;
-  height: auto;
-  display: block;
+.hero__portrait-image {
+  width: min(420px, 82vw);
+  border-radius: calc(var(--radius-lg) + 12px);
+  border: 1px solid rgba(136, 175, 255, 0.24);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.1), rgba(18, 32, 58, 0.4));
+  box-shadow: 0 40px 90px rgba(4, 6, 15, 0.58);
 }
 
-.portrait-card figcaption {
-  padding: 1.4rem;
+.hero__portrait figcaption {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(8, 20, 42, 0.6);
+  border: 1px solid rgba(136, 175, 255, 0.2);
   backdrop-filter: blur(18px);
-  background: rgba(10, 22, 46, 0.72);
-  border-top: 1px solid rgba(136, 175, 255, 0.18);
+  box-shadow: 0 20px 60px rgba(4, 6, 15, 0.45);
   font-size: 0.95rem;
   color: var(--text-muted);
+  text-align: center;
 }
 
-.portrait-card figcaption span {
-  display: block;
+.hero__portrait figcaption span {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--text-primary);
-  margin-bottom: 0.35rem;
 }
 
 .section {
@@ -578,6 +596,30 @@ h1 {
   color: var(--text-primary);
   font-weight: 500;
   font-size: 0.9rem;
+}
+
+@media (min-width: 900px) {
+  .hero__inner {
+    grid-template-columns: minmax(320px, 0.85fr) minmax(360px, 1fr);
+    justify-items: stretch;
+  }
+
+  .hero__portrait {
+    justify-self: end;
+  }
+
+  .hero__content {
+    text-align: left;
+    justify-self: start;
+  }
+
+  .hero__actions {
+    justify-content: flex-start;
+  }
+
+  .hero__metrics {
+    justify-items: stretch;
+  }
 }
 
 @media (max-width: 960px) {
